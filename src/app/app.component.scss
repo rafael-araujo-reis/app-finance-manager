@@ -1,0 +1,69 @@
+@import "../colors.scss";
+
+.container {
+  padding: 2.4rem;
+  max-width: 1400px;
+  margin-inline: auto;
+  min-height: 100vh;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      display: inline-flex;
+      width: 25rem;
+      cursor: pointer;
+
+      svg > path:nth-child(1) {
+        fill: $secondary-color;
+      }
+      svg > path:nth-child(1) {
+        fill: $secondary-color;
+      }
+      svg > path:nth-child(2),
+      svg > path:nth-child(4) {
+        fill: $primary-color;
+      }
+
+      svg > path:nth-child(3) {
+        stroke: $primary-color;
+      }
+      svg > path:nth-child(5),
+      svg > path:nth-child(6),
+      svg > path:nth-child(7),
+      svg > path:nth-child(8) {
+        stroke: $secondary-color;
+      }
+    }
+
+    .menu {
+      display: flex;
+      padding: 2rem;
+
+      .item-menu {
+        display: flex;
+        padding: 0 2.4rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        color: $secondary-color;
+
+        + .item-menu {
+          border-left: 1px solid $secondary-color;
+        }
+
+        &:hover {
+          font-weight: 600;
+        }
+
+        &.active {
+          border: 1px solid transparent;
+        }
+      }
+    }
+  }
+
+  .main {
+    margin-top: 4.8rem;
+  }
+}
