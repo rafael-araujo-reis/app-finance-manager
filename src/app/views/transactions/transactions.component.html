@@ -1,0 +1,40 @@
+<div>
+  <div class="title-page">
+    <h1 class="title">transações</h1>
+    <p class="subtitle">
+      confira sua lista de transações abertas para pagamento
+    </p>
+
+    <table class="table" *ngIf="transactions">
+      <tr>
+        <th class="status">status</th>
+        <th class="amount">valor</th>
+        <th class="description">descrição</th>
+        <th class="date">data pagamento</th>
+        <th class="payment">forma de pagamento</th>
+        <th class="actions">editar ou excluir</th>
+      </tr>
+      <tr *ngFor="let transaction of transactions.data">
+        <td *ngIf="transaction.processed" class="processed">
+          <mat-icon>check_circle_outline</mat-icon>
+        </td>
+        <td *ngIf="!transaction.processed" class="no-processed">
+          <mat-icon>info</mat-icon>
+        </td>
+
+        <td>{{ transaction.amount / 100 | currency }}</td>
+        <td>{{ transaction.description }}</td>
+        <td>{{ transaction.date | date : "dd/MM/yyyy" }}</td>
+        <td>{{ transaction.payment }}</td>
+        <td class="actions-button">
+          <button class="button edit">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button class="button delete">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

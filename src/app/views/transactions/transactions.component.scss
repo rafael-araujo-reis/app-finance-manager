@@ -1,0 +1,74 @@
+@import "../../../colors.scss";
+
+.table {
+  .status,
+  .actions {
+    font-weight: 400;
+    font-size: 1.6rem;
+  }
+  .amount,
+  .payment,
+  .description,
+  .date {
+    font-weight: 600;
+  }
+
+  .status {
+    width: 10rem;
+  }
+
+  .amount,
+  .payment {
+    width: 25rem;
+  }
+  .description {
+    width: 54rem;
+  }
+  .date,
+  .actions {
+    width: 20rem;
+  }
+
+  th {
+    padding-block: 2.4rem;
+    margin: 0;
+
+    color: $text-header-table;
+    background-color: $bg-header-table;
+  }
+
+  td {
+    padding-block: 1.6rem;
+    text-align: center;
+  }
+
+  tr + tr {
+    border-block: 0.1rem solid $border-table;
+  }
+
+  .processed {
+    color: $success;
+  }
+  .no-processed {
+    color: $info;
+  }
+
+  .actions-button {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      border: none;
+      background-color: transparent;
+
+      &.edit {
+        color: $edit;
+      }
+      &.delete {
+        color: $delete;
+      }
+    }
+  }
+}
