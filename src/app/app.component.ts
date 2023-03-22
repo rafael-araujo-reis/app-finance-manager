@@ -1,7 +1,7 @@
 import { RoutersEnum } from './shared/constants/routersEnum';
 import { RouterNavigate } from './shared/utils/router-navigate';
 import { Component } from '@angular/core';
-
+import { IMenu } from './interfaces/common/IMenu.interface';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app-finance-manager';
 
-  menu = [
+  menu: IMenu[] = [
     { title: 'transações', path: RoutersEnum.TRANSACTIONS, active: true },
     { title: 'relatórios', path: RoutersEnum.REPORTS, active: false },
     { title: 'ajustes', path: RoutersEnum.SETTINGS, active: true },
@@ -18,7 +18,7 @@ export class AppComponent {
 
   constructor(private navigateTo: RouterNavigate) {}
 
-  navigateRouter(path: string) {
+  navigateRouter(path: string): void {
     this.navigateTo.navigatePath(path);
   }
 }

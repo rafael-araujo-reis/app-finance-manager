@@ -14,7 +14,7 @@
         <th class="payment">forma de pagamento</th>
         <th class="actions">editar ou excluir</th>
       </tr>
-      <tr *ngFor="let transaction of transactions.data">
+      <tr *ngFor="let transaction of transactions">
         <td *ngIf="transaction.processed" class="processed">
           <mat-icon>check_circle_outline</mat-icon>
         </td>
