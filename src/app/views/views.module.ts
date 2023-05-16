@@ -5,6 +5,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { SettingsComponent } from './settings/settings.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MatIconModule } from '@angular/material/icon';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
     ReportsComponent,
     SettingsComponent,
     PageNotFoundComponent,
+    LoginComponent,
   ],
   imports: [CommonModule, MatIconModule],
 })
