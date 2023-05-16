@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const appName = process.env.npm_package_name;
+const appName = "app-finance-manager";
 const outputPath = `${__dirname}/dist/${{ appName }}`;
 
 app.use(express.static(outputPath));
